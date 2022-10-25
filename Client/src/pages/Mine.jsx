@@ -539,7 +539,7 @@ export default function Mine(props) {
                 
               <Text>LeaseHolder : {quarry.leaseHolder}</Text>
              
-              <Text>Material Mines :  {quarry.Material}</Text>
+              <Text>Material Mined :  {quarry.Material}</Text>
               
               <Text>Lease Term :{quarry.leasePeriod[0]} to {quarry.leasePeriod[1]}</Text>
               <Text>EC Validity : 04/10/2022-05/5/2026</Text>

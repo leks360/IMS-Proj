@@ -83,7 +83,7 @@ export default function MineCard({quarry,where}) {
                         </>
                         :
                         
-                        <Text>Concern MI : {quarry.leaseHodler}</Text>
+                        <Text>Concern MI : {quarry?.concernInspector[0]}</Text>
                     }
                     
                 </Info>

@@ -99,7 +99,7 @@ export default function AddDispatch({name,Year,Month,setReload,setOpen}) {
         
         <Container>
             <Wrapper>
-                <H2>Add Royalty for {Month} month and {Year} : {name}</H2>
+                <H2>Add Royalty for {Month}th month of {Year} : {name}</H2>
                 <Line>
                     <Title>Amount in MT :</Title>
                     <FormInput type="number" errorMessage="Required Number" required placeholder='amount of materials dispatch in a month in MT' onChange={(e)=>setAmount(e.target.value)}></FormInput>

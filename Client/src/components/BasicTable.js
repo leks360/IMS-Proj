@@ -44,6 +44,18 @@ const PG=styled.div`
     justify-content: center;
     align-items: center;
 `
+const PGSec=styled.div`
+    height: 32px;
+    width: 32px;
+    background-color:grey;
+    &:hover{
+        background-color:#3b79ff;
+    }
+    border:0.5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
 export default function BasicTable({dataa,setLimit,setPage,page,which}) {
     
 
@@ -74,7 +86,7 @@ export default function BasicTable({dataa,setLimit,setPage,page,which}) {
     const {globalFilter}=state;
     const [pag,setPag]=useState([1,2,3,4,5]);
     const [inc,setInc]=useState(0);
-    const [selected,setSelected]=useState(0);
+    const [selected,setSelected]=useState(1);
     console.log(pag);
     const handleRight=(e)=>{
         console.log("RIGHT");
@@ -141,7 +153,11 @@ export default function BasicTable({dataa,setLimit,setPage,page,which}) {
             <PG onClick={handleLeft}><KeyboardDoubleArrowLeftIcon/></PG>
                 {
                     pag?.map((pg)=>{
+                        if((pg+inc)==selected){
+                        return <PGSec onClick={handleSelect}>{pg+inc}</PGSec>
+                        }else{
                         return <PG onClick={handleSelect}>{pg+inc}</PG>
+                        }
                     })
                 }
               <PG onClick={handleRight}><KeyboardDoubleArrowRightIcon/></PG>  
