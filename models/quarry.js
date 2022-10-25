@@ -14,7 +14,7 @@ const quarrySchema=new mongoose.Schema({
         type:[String]
     },
     leasePeriod:{
-        type:[Date],
+        type:[String],
 
     },
     img:{
