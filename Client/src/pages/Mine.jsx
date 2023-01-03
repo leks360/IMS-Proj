@@ -447,7 +447,9 @@ export default function Mine(props) {
     useEffect(()=>{
         const getClosingBal=()=>{
            setClo([0,0,0,0,0,0,0,0,0,0,0,0]);   
+
             console.log("CALCULARINT CLOSING BAL",deposits.data," and ",dispatch);
+            console.log("THIS IS DEPOSIT ",deposits);
             console.log(typeof deposits.data);
             let bal=0;
             if(deposits.data!=null){
