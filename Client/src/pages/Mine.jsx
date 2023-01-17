@@ -452,8 +452,8 @@ export default function Mine(props) {
 //             console.log("THIS IS DEPOSIT ",deposits);
 //             console.log(typeof deposits.data);
             let bal=0;
-            if(deposits.data!=null){
-            deposits.data.map((depo,idx)=>{
+            if(deposits?.data!=null){
+            deposits?.data?.map((depo,idx)=>{
                 const month=depo.month;
                 setClo((datas)=>({
                     ...datas,
