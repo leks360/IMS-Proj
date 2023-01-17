@@ -532,7 +532,7 @@ export default function Mine(props) {
             <Img src={quarry.img}></Img>
             </Slider>
           </Top>
-          <BasicDetails>
+          <BasicDetails> 
                 
                 <Ins>Focal Inspector: test1</Ins>
              <Splice>
@@ -541,7 +541,7 @@ export default function Mine(props) {
              
               <Text>Material Mined :  {quarry.Material}</Text>
               
-              <Text>Lease Term :{quarry.leasePeriod[0]} to {quarry.leasePeriod[1]}</Text>
+              <Text>Lease Term :{quarry?.leasePeriod[0]} to {quarry?.leasePeriod[1]}</Text>
               <Text>EC Validity : 04/10/2022-05/5/2026</Text>
               <Text>Employemnt : 234</Text>
             </Splice>
@@ -610,7 +610,7 @@ export default function Mine(props) {
                     
                         Royalty Deposits
                         {console.log(deposits,"HERE IN COMPOENENT")}
-                        {deposits.data.map((dep)=>{
+                        {deposits?.data?.map((dep)=>{
                             if(dep.month==index){
                             return <TableRowDepo>
                             <span>Date : {dep.dateDeposited}  Amount :{dep.amountDeposited} Reciept No: {dep.recieptNo} </span>
